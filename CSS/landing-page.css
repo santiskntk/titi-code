@@ -135,7 +135,7 @@ h3{
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: var(--gris);
 }
 
 .tech-container h2{
