@@ -3,9 +3,10 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-    color: white;
+    color: var(--gris);
 }
 
+/* COLORES DEL SITIO */
 
 :root {
         --gris: #D7DEE8;
@@ -16,6 +17,7 @@
         --negro: #000000;
     }
 
+/* CONTENEDOR PARA LAS ESTRELLAS */
 
 .container {
     background-image: linear-gradient(#02023E, #054994);
@@ -23,7 +25,6 @@
     position: fixed;
     z-index: -1;
 }
-
 .space {
     --size: 2px;
     --space-layer: 
@@ -40,16 +41,16 @@
     left: 0;
     opacity: 0.75;
 }
-
 .space {
     animation: move var(--duration) linear infinite;
 }
-
 @keyframes move {
     from { transform: translateY(0); }
     to { transform: translateY(-100vh); }
 }
 
+
+/* HERO SECTION DONDE SE ENCUENTRA EL NOMBRE DE EMPRESA */
 
 .hero-section{
     height: 100vh;
@@ -60,7 +61,6 @@
 .hero-section img{
     width: 10%;
 }
-
 h1{
     text-transform: uppercase;
     font-size: 4rem;
@@ -71,26 +71,7 @@ h1 span{
     font-weight: 900;
 }
 
-
-.text-container{
-    padding: 100px;
-}
-
-.text-items{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 100px;
-    align-items: center;
-    text-align: center;
-    padding: 100px 50px;
-}
-
-.text-items p{
-    direction: ltr;
-    font-size: 1.1rem;
-}
-
-
+/* CONTENEDOR DE LOS VALORES DE EMPRESA */
 
 .core-values-container ul{
     list-style: none;
@@ -110,25 +91,32 @@ h1 span{
     font-weight: 600;
     transition-property: background-color, padding;
     transition-duration: 1s, 1s;
-    
 }
 
-
-
-
-
-
-
+/* CONTENEDOR DE MISION Y VISION */
+.text-container{
+    padding: 100px;
+}
+/* ITEM O MINI SECCION CON DISPLAY FLEX */
+.text-items{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    align-items: center;
+    text-align: center;
+    padding: 100px 50px;
+}
 h2{
     font-size: 2rem;
     font-weight: 900;
     text-transform: uppercase;
 }
-
-h3{
-    font-weight: 800;
-    font-size: 1.5rem;
+.text-items p{
+    direction: ltr;
+    font-size: 1.1rem;
 }
+
+/* SECCION DE TECNOLOGIAS */
 
 .tech-container{
     padding: 80px;
@@ -137,32 +125,30 @@ h3{
     justify-content: center;
     background-color: var(--gris);
 }
-
 .tech-container h2{
     margin-bottom: 60px;
 }
-
-
+h3{
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.tech-container h2, .tech-container h3{
+    color: #02023E;
+}
 .tech-planet-card{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
 }
-
 .planet-card{
     justify-content: center;
     text-align: center;
     padding: 0px 80px;
 }
-
 .planet-card img{
     width: 100%;
 }
-
-.tech-container h2, .tech-container h3{
-    color: #02023E;
-}
-
+/* ANIMACIONES DE CADA PLANETA */
 .anima1 img{
     animation: rotacion 5s linear infinite;
 }
@@ -172,8 +158,6 @@ h3{
 .anima3 img{
     animation: rotacion 10s reverse infinite;
 }
-
-
 @keyframes rotacion {
     from {
         transform: rotate(0deg);
@@ -183,6 +167,8 @@ h3{
     }
 }
 
+/* CONTENEDOR PARA INTEGRANTES DEL EQUIPO */
+
 .team-container{
     align-items: center;
     justify-content: center;
@@ -190,7 +176,6 @@ h3{
     padding: 100px;
     padding-bottom: 0px;
 }
-
 .team-person-card{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -200,18 +185,6 @@ h3{
     margin: 120px 40px;
     align-items: center;
 }
-
-.img-planet-person{
-    display: flex;
-    justify-content: end;
-}
-
-.team-person-card img{
-    width: 35%;
-    justify-content: center;
-    text-align: center;
-}
-
 .team-person-card h3{
     font-style: italic;
     font-size: 1.7rem;
@@ -221,14 +194,21 @@ h3{
     font-size: 1.7rem;
     font-weight: 300;
 }
-
+.img-planet-person{
+    display: flex;
+    justify-content: end;
+}
+.team-person-card img{
+    width: 35%;
+    justify-content: center;
+    text-align: center;
+}
+/* PROPIEDAD USADA A LO LARGO DEL HTML PARA INVERTIR ORDEN */
 .op2{
     direction: rtl;
 }
 
-
-
-
+/* CONTENEDOR PARA EL CALL TO ACTION O DIRECCION AL SITIO */
 
 .call-to-action-container{
     display: grid;
@@ -236,18 +216,19 @@ h3{
     background-color: var(--gris);
     height: 505px;
 }
-
+.call-to-action-content{
+    text-align: center;
+    margin: auto;
+}
 .call-to-action-content p, .call-to-action-content h1, .call-to-action-content h1 span{
     color: #02023E;
     font-style: normal;
     font-size: 3.4rem;
 }
-
 .call-to-action-content p{
     font-size: 1.5rem;
     text-transform: uppercase;
 }
-
 .call-to-action-content button{
     background-color: #02023E;
     width: 100%;
@@ -258,28 +239,25 @@ h3{
     margin: 25px 0px;
     border: none;
 }
-
 .call-to-action-content button:hover{
     background-color: #29588F;
     box-shadow: 0px 0px 15px 0px #02023e76;
     transition: 1s;
     border: none;
 }
-
-.call-to-action-content{
-    text-align: center;
-    margin: auto;
-}
-
 .call-to-action-img img{
     width: 100%;
 }
+
+/* CONTENEDOR EJEMPLOS DEL SITIO */
 
 .examples-container{
     text-align: center;
     padding-top: 100px;
 }
-
+.title-examples{
+    font-weight: 500;
+}
 .example{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -287,24 +265,23 @@ h3{
     gap: 200px;
     align-items: center;
 }
-
-.title-examples{
-    font-weight: 500;
-}
-
 .examples-container-img img{
     width: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 100px 0px rgba(255, 255, 255, 0.461);
+    border: 3px solid var(--blanco);
 }
-
 .examples-container-text p{
     font-size: 1.4rem;
 }
-
+.examples-container-text p a{
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 700;
+}
 .op2-correct{
     direction: ltr;
 }
-
 .sub-title-examples{
     height: 60vh;
     display: flex;
@@ -313,21 +290,12 @@ h3{
     justify-content: center;
 }
 
-
-
-
-
-
-
-
-
+/* FOOTER PERSONALIZADO PARA LA LANDING */
 
 .exterior-site-footer{
     display: flex;
     justify-content: center;
 }
-
-
 .site-footer {
     display: flex;
     align-items: center;
@@ -337,12 +305,9 @@ h3{
     margin: 45px;
     gap: 4vw;
 }
-
 .site-footer a {
     text-decoration: none;
 }
-
-
 .icon-container {
     display: flex;
     justify-content: center;
@@ -351,12 +316,10 @@ h3{
     font-size: 29px;
     color: var(--blanco);
 }
-
 .icon-container i {
     color: var(--blanco);
     text-decoration: none;
 }
-
 .circle {
     display: flex;
     justify-content: center;
@@ -368,28 +331,25 @@ h3{
     box-shadow: 0px 0px 20px -5px white;
     transition: .5s;
 }
-
 .circle:hover {
     background-color: var(--blanco);
     color: #054994;
     transition: 1s;
 }
-
 .circle:hover i{
     color: #054994;
     transition: 1s;
 }
-
 .copyright-container {
     display: flex;
     height: 6vh;
     justify-content: center;
     align-items: center;
-    background-color: var(--blanco);
+    background-color: var(--gris);
     color: var(--azul-oscuro);
     font-size: 1.3rem;
+    font-weight: 500;
 }
-
 .copyright-container p{
     color: (var(--azul-oscuro)); 
 }
